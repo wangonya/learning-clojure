@@ -1,6 +1,6 @@
 # guestbook
 
-generated using Luminus version "4.09"
+generated using Luminus version "4.11"
 
 FIXME
 

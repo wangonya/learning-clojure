@@ -3,8 +3,7 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
-  :dependencies [[ch.qos.logback/logback-classic "1.2.3"]
-                 [clojure.java-time "0.3.2"]
+  :dependencies [[clojure.java-time "0.3.2"]
                  [com.h2database/h2 "1.4.200"]
                  [conman "0.9.1"]
                  [cprop "0.1.17"]
@@ -14,8 +13,6 @@
                  [luminus-immutant "0.2.5"]
                  [luminus-migrations "0.7.1"]
                  [luminus-transit "0.1.2"]
-                 [luminus-undertow "0.1.11"]
-                 [luminus/ring-ttl-session "0.3.3"]
                  [markdown-clj "1.10.5"]
                  [metosin/muuntaja "0.6.8"]
                  [metosin/reitit "0.5.13"]
@@ -26,8 +23,8 @@
                  [org.clojure/tools.cli "1.0.206"]
                  [org.clojure/tools.logging "1.1.0"]
                  [org.webjars.npm/bulma "0.9.2"]
-                 [org.webjars.npm/material-icons "0.3.1"]
-                 [org.webjars/webjars-locator "0.40"]
+                 [org.webjars.npm/material-icons "0.7.0"]
+                 [org.webjars/webjars-locator "0.41"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [ring-webjars "0.2.0"]
                  [ring/ring-core "1.9.3"]
@@ -42,7 +39,7 @@
   :target-path "target/%s/"
   :main ^:skip-aot guestbook.core
 
-  :plugins []
+  :plugins [[lein-immutant "2.1.0"]]
 
   :profiles
   {:uberjar {:omit-source true
@@ -60,7 +57,8 @@
                                  [ring/ring-devel "1.9.3"]
                                  [ring/ring-mock "0.4.0"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.24.1"]
-                                 [jonase/eastwood "0.3.5"]]
+                                 [jonase/eastwood "0.3.5"]
+                                 [cider/cider-nrepl "0.26.0"]]
 
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]
