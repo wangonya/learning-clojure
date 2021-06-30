@@ -1,1 +1,0 @@
-web: java -Dclojure.main.report=stderr -cp target/uberjar/guestbook_api.jar clojure.main -m guestbook-api.core
